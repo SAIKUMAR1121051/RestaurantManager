@@ -1,0 +1,38 @@
+{
+  "name": "restapi_midterm",
+  "version": "1.0.0",
+  "description": "Midterm Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAIKUMAR1121051/RestApi_Midterm.git"
+  },
+  "keywords": [
+    "get",
+    "put",
+    "delete",
+    "patch",
+    "update"
+  ],
+  "author": "sai kumar erpina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAIKUMAR1121051/RestApi_Midterm/issues"
+  },
+  "homepage": "https://github.com/SAIKUMAR1121051/RestApi_Midterm#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "git": "^0.1.5",
+    "mongoose": "^5.9.6",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}

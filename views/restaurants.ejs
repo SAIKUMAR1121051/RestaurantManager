@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    <title>Restaurants</title>
+</head>
+<body>
+    <%- include ('partials/header.ejs'); %>
+    <%- include ('partials/nav.ejs') -%>
+    <div class="container-fluid text-center">    
+        <div class="row content">
+          
+          <div class="col-sm-6 text-left"> 
+            <h1>Restaurants Details</h1>
+              <table class="table table-dark">
+              <thead>
+                  <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Membership Id</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% data.forEach(restaurant => { %>
+                  <tr>
+                  <td><%= restaurant.title %></td>
+                  <td><%= restaurant.location %></td>
+                  <td><%= restaurant.membershipId %></td>
+                  <td>
+                    <button type="submit" onclick="deleteRestaurant ('<%= restaurant._id %>')" class="btn btn-danger">Delete</button>
+                  </td>
+                  <td>
+                    <button type="submit" onclick="location.href='/updateRestaurant/<%= restaurant._id%>'" class="btn btn-primary">Update</button>
+                  </td>
+                  </tr>
+                 <% }) %> 
+              </tbody>
+      </table>
+          </div>
+          
+        </div>
+      </div>
+      <script src="/assets/scripts/script.js"></script>
+
+      <div class="container-fluid text-center">
+        <form action="/addRestaurant">
+          <button type="submit" class="btn btn-primary">Add Restaurant </button>
+        </form>
+      </div>
+      <%- include ('partials/footer.ejs'); %>
+</body>
+</html>

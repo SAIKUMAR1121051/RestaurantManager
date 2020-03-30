@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Update Restaurant</title>
+</head>
+<body>
+    
+    <%- include ('partials/header.ejs'); %>
+    <%- include ('partials/nav.ejs') -%>
+  
+<div class="container">
+        <h2>Restaurant Form</h2> 
+        <form class="form-horizontal" action="/updateRestaurant" method="POST">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="restaurantId">Restaurant Id:</label>
+                <div class="col-sm-10"> 
+                  <input type="text" class="form-control" id="restaurantId" value="<%= data._id %>" name="restaurantId" readonly>
+                </div>
+              </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="title">Title:</label>
+            <div class="col-sm-10"> 
+              <input type="text" class="form-control" id="title" value="<%= data.title %>" name="title" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="location">Location:</label>
+            <div class="col-sm-10">          
+              <input type="text" class="form-control" id="location" value="<%= data.location %>" name="location" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" >Membership:</label> 
+            <div class="col-sm-4">
+                <input type="text" class="form-control"  value="<%= data.membershipId %>" readonly>
+            </div>
+        </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <%- include ('partials/footer.ejs'); %>
+</body>
+</html>
