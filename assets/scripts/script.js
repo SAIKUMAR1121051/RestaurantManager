@@ -1,6 +1,6 @@
 
   const deleteRestaurant = function(id){
-    let deleteUrl = 'http://localhost:3000/api/v1/restaurants/'+id;
+    let deleteUrl = 'http://159.65.32.185:3000/api/v1/restaurants/'+id;
     console.log(deleteUrl);
     $.ajax({
       url: deleteUrl,
@@ -17,7 +17,7 @@
 
   const updateRestaurant = function(restaurant){
       console.log('hittind script file'); 
-    let updateUrl = 'http://localhost:3000/updateRestaurant/'+restaurant._id;
+    let updateUrl = 'http://159.65.32.185:3000/updateRestaurant/'+restaurant._id;
     $.ajax({
       url: updateUrl,
       contentType: "application/json",
